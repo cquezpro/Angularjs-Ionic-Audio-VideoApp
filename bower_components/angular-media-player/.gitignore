@@ -1,0 +1,13 @@
+node_modules/
+libs/
+www/
+
+# docs ignore
+docs/*.md.tpl.html
+docs/examples/*.md.tpl.html
+docs/app.js
+docs/libs.js
+docs/*.map
+docs/templates-docs.js
+docs/prerender-*.html
+docs/sitemap.xml

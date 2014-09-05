@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "description": "Mobile application.",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-cssmin": "~0.9.0",
+    "grunt-contrib-copy": "~0.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThirtyFive/FastTribe-App.git"
+  }
+}

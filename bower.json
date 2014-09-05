@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "authors": [
+    "Nicholas DeVries <nicholas@thirtyfive.io>"
+  ],
+  "description": "Mobile application",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "ionic": "~0.9.25",
+    "angular-audio-playlist": "~0.2.1"
+  }
+}

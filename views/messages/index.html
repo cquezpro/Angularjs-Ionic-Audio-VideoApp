@@ -1,0 +1,49 @@
+<ion-view title="Posts" hide-back-button="true" left-buttons="leftButtons" right-buttons="rightButtons">
+    <ion-content has-header="true">
+        <div class="card" ng-show="message">
+            <div class="item item-text-wrap">
+                {{ message }}
+            </div>
+        </div>
+        <div class="list card" ng-repeat="message in messages | orderBy: 'PostDate':true">
+
+            <div class="item item-text-wrap">
+                <h2>{{ message.Author }}</h2>
+                <p>{{ message.PostDate | date:'MMM d @ h:mm a' }}</p>
+            </div>
+
+            <div class="item item-body">
+                <p class="message">{{ message.Message }}</p>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>
+
+<div class="bar bar-footer">
+<div class="tabs tabs-icon-top">
+
+<a href="#/videos" class="tab-item">
+<i class="icon ion-social-youtube smallIcon" data-pack="default" data-tags="ion-social-youtube"> </i>
+Videos
+</a>
+
+<a href="#/audios" class="tab-item">
+<i class="icon ion-volume-high smallIcon" data-pack="default" data-tags="ion-volume-high"> </i>
+Audios
+</a>
+
+<a href="#/resources" class="tab-item">
+<i class="icon ion-document-text smallIcon" data-pack="default" data-tags="ion-document-text"> </i>
+Resources
+</a>
+
+<a href="#/messages" class="tab-item">
+<i class="icon ion-chatbox smallIcon" data-pack="default" data-tags="ion-chatbox"> </i>
+Posts
+</a>
+
+
+</div>
+</div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MainCtrl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>{{ client }}</title>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <!--<link href="css/app.min.css" rel="stylesheet">-->
+	<link href="bower_components/ionic/release/css/ionic.min.css" rel="stylesheet">
+	<link href="bower_components/angular-busy/dist/angular-busy.css" rel="stylesheet">
+	<link href="css/build/app.css" rel="stylesheet">
+	
+    <!--<script src="js/app.min.js"></script>-->
+			
+	
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/ionic/release/js/ionic.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+	<!--<script src="bower_components/angular-audio-playlist/dist/angular-audio-player.js"></script>-->
+	<script src="bower_components/angular-media-player/dist/angular-media-player.js"></script>
+	<script src="bower_components/angular-busy/dist/angular-busy.js"></script>
+	      
+	
+	<script src="js/build/app.js"></script>
+	<script src="js/build/services.js"></script>
+	<script src="js/build/controllers.js"></script>
+	<!--<script src="js/build/DownloadAudioList.js"></script>-->
+	
+</head>
+
+<body animation="slide-left-right-ios7">
+
+    <ion-side-menus>
+        <ion-pane ion-side-menu-content>
+            <ion-nav-bar type="bar-assertive" left-buttons="leftButtons"></ion-nav-bar>
+            <ion-nav-view></ion-nav-view>
+        </ion-pane>
+
+        <ion-side-menu side="left" is-enabled="menu.state" class="sideMenu">
+            <ul class="list">
+                <li class="item item-dark" ui-sref="welcome" ng-click="toggle()">
+                    Home
+                </li>
+                <li class="item item-dark" ui-sref="audios-index" ng-click="toggle()">
+                    Audio
+                </li>
+                <li class="item item-dark" ui-sref="messages-index" ng-click="toggle()">
+                    Posts
+                </li>
+                <li class="item item-dark" ui-sref="resources" ng-click="toggle()">
+                    Resources
+                </li>
+                <li class="item item-dark" ui-sref="videos-index" ng-click="toggle()">
+                    Videos
+                </li>
+                <!--
+                <li class="item item-dark" ui-sref="public" ng-click="toggle()">
+                    Public View
+                </li>
+                -->
+                <li class="item item-dark" ng-click="logout()">
+                    Logout
+                </li>
+            </ul>
+        </ion-side-menu>
+    </ion-side-menus>
+
+</body>
+</html>

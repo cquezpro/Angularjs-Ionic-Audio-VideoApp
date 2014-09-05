@@ -1,0 +1,28 @@
+{
+  "name": "angular-media-player",
+  "version": "0.5.5",
+  "main": "dist/angular-media-player.min.js",
+  "keywords": [
+    "angular",
+    "angular.js",
+    "angularjs",
+    "audio",
+    "video",
+    "media",
+    "player",
+    "playlist"
+  ],
+  "ignore": [
+    "node_modules",
+    "docs",
+    "test"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.0",
+    "angular-mocks": "~1.2.0",
+    "angular-route": "~1.2.0",
+    "angular-animate": "~1.2.0",
+    "angular-dragdrop": "ganarajpr/angular-dragdrop#master",
+    "github-fork-ribbon-css": "~0.1.0"
+  }
+}

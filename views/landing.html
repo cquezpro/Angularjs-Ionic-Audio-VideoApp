@@ -1,0 +1,19 @@
+<ion-view title="Proalliance" hide-nav-bar="true">
+    <ion-content has-header="false" padding="true">
+        <div class="card" ng-show="message">
+            <div class="item item-text-wrap">
+                {{ message }}
+            </div>
+        </div>
+        <div class="logo"></div>
+        <h3>{{ client }}</h3>
+        <button class="button button-block button-assertive" ui-sref="login">
+            Sign in
+        </button>
+        <!--
+        <button class="button button-block button-light" ui-sref="public">
+            Public view
+        </button>
+        -->
+    </ion-content>
+</ion-view>

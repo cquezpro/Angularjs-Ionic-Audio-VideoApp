@@ -1,0 +1,46 @@
+<ion-view title="New Message" left-buttons="leftButtons">
+    <ion-content has-header="true">
+        <div class="card" ng-show="message">
+            <div class="item item-text-wrap">
+                {{ message }}
+            </div>
+        </div>
+
+        <div class="list list-inset">
+            <form novalidate name="messageForm" ng-submit="send()" autocomplete="off">
+                <label class="item item-input">
+                    <textarea placeholder="Message" rows="5" ng-model="post.Message" required></textarea>
+                </label>
+                <button type="submit" class="button button-assertive button-block" ng-disabled="messageForm.$invalid">Send</button>
+            </form>
+        </div>
+
+    </ion-content>
+</ion-view>
+
+<div class="bar bar-footer">
+<div class="tabs tabs-icon-top">
+
+<a href="#/videos" class="tab-item">
+<i class="icon ion-social-youtube smallIcon" data-pack="default" data-tags="ion-social-youtube"> </i>
+Videos
+</a>
+
+<a href="#/audios" class="tab-item">
+<i class="icon ion-volume-high smallIcon" data-pack="default" data-tags="ion-volume-high"> </i>
+Audios
+</a>
+
+<a href="#/resources" class="tab-item">
+<i class="icon ion-document-text smallIcon" data-pack="default" data-tags="ion-document-text"> </i>
+Resources
+</a>
+
+<a href="#/messages" class="tab-item">
+<i class="icon ion-chatbox smallIcon" data-pack="default" data-tags="ion-chatbox"> </i>
+Posts
+</a>
+
+
+</div>
+</div>

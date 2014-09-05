@@ -1,0 +1,93 @@
+<div id="AudiosSingleCtrl" ng-controller="AudiosSingleCtrl"><ion-view title="{{ audio.name }}" left-buttons="leftButtons">
+    <ion-content has-header="true">
+        <div class="card" ng-show="message">
+            <div class="item item-text-wrap">
+                {{ message }}
+            </div>
+        </div>
+        <div class="list card">
+
+            <div class="item item-text-wrap">
+                <h2>{{ audio.title }}</h2>
+                <p>{{ audio.author }}</p>
+                 
+            </div>
+          <div class="item item-body" id="downloadcountdiv">
+              <div cg-busy="btnText">
+               <button class="button button-block button-stable" ng-click="download(audio.url)">
+                 <span ng-show="downloadBtnLable == 1">Delete Local Copy</span>
+                 <span ng-show="downloadBtnLable == 2">Download</span>
+                 <span ng-bind="percentage" ng-show="downloadBtnLable == 3"></span>
+               </button></div>
+               <div class="progress" ng-show="progressbarhide">
+                   <div class="time">
+                        <small>{{ downloadCount }}%</small> 
+                    </div>
+                    <div class="progress-bar">
+                          <div class="playing" ng-style="{ width: downloadCount+ '%' }"></div>
+                    </div>  
+               </div>   
+           </div>  
+           
+         <div class="item item-body" style="width:100%;float:left;">
+                <!-- <audio data-player-control="mediaPlayer" data-playlist="audioPlaylist" media-player  ng-src="{{ audiourl }}"></audio>-->
+             	<audio media-player="mediaPlayer" data-playlist="audioPlaylist" media-player  ng-src="{{ audiourl }}"></audio>
+             	<div style="width: 20%;float: left;">
+                 	<button class="button button-block button-stable" ng-click="playpause(mediaPlayer)">
+                        <span><i class="icon ion-ios7-rewind"></i></span>
+                    </button>
+                 </div>
+             	<div style="width: 60%;float: left;">
+                    <button class="button button-block button-stable" ng-click="playpause(mediaPlayer)">
+                        <span ng-hide="mediaPlayer.playing"><i class="icon ion-ios7-play"></i></span>
+                        <span ng-show="mediaPlayer.playing"><i class="icon ion-ios7-pause"></i></span>
+                    </button>
+                 </div>
+             	<div style="width: 20%;float: left;">
+                 	<button class="button button-block button-stable" ng-click="playpause(mediaPlayer)">
+                        <span><i class="icon ion-ios7-fastforward"></i></span>
+                    </button>
+                 </div>
+                <div class="progress" ng-click="mediaPlayer.seek(mediaPlayer.duration * seekPercentage($event))" style="clear:both;">
+                    <div class="time">
+                        <small>{{ mediaPlayer.formatTime }}</small> / {{ mediaPlayer.formatDuration }}
+                    </div>
+                    <div class="progress-bar">
+                        <div class="playing" role="progressbar" aria-valuemin="0" aria-valuemax="100" ng-style="{ height:'15px', width: mediaPlayer.currentTime*100/mediaPlayer.duration + '%' }"></div>
+                    </div>
+                  </div>
+                <p>{{ audio.description }}</p>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>
+
+<div class="bar bar-footer">
+<div class="tabs tabs-icon-top">
+
+<a href="#/videos" class="tab-item">
+<i class="icon ion-social-youtube smallIcon" data-pack="default" data-tags="ion-social-youtube"> </i>
+Videos
+</a>
+
+<a href="#/audios" class="tab-item">
+<i class="icon ion-volume-high smallIcon" data-pack="default" data-tags="ion-volume-high"> </i>
+Audios
+</a>
+
+<a href="#/resources" class="tab-item">
+<i class="icon ion-document-text smallIcon" data-pack="default" data-tags="ion-document-text"> </i>
+Resources
+</a>
+
+<a href="#/messages" class="tab-item">
+<i class="icon ion-chatbox smallIcon" data-pack="default" data-tags="ion-chatbox"> </i>
+Posts
+</a>
+
+
+</div>
+</div>
+
+</div>

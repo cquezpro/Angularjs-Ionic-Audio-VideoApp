@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="net.proalliance.m" version="0.9.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">    
+    <name>Proalliance Mobile App</name>
+    <description>
+        Application that allows messaging, watching video, playing recordings, and viewing resources.
+    </description>
+    <author email="bill@thirtyfive.io" href="http://www.proalliance.net">
+        Proalliance
+    </author>
+
+    <preference name="phonegap-version" value="3.3.0" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-installLocation" value="auto" />
+    
+    <icon src="res/icon.png" />
+    <content src="index.html" />    
+    <gap:plugin name="org.apache.cordova.file" version="0.2.4" />
+    <gap:plugin name="org.apache.cordova.file-transfer" version="0.3.2" />
+    <access origin="*" />
+</widget>
